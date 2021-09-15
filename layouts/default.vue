@@ -6,6 +6,7 @@
       :clipped="clipped"
       fixed
       app
+      v-if="!$route.meta.hideLeftMenu"
     >
       <v-list>
         <v-list-item
@@ -58,7 +59,7 @@
       </v-btn>
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container :fluid="$route.meta.hideLeftMenu">
         <Nuxt />
       </v-container>
     </v-main>
